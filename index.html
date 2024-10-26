@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>შემაჯამებელი წერა #2</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style> 
+  
+    body {
+    font-family: Sylfaen, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #8bdd9f;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.question {
+    margin-bottom: 20px;
+    
+    gap: 10px;
+    border: 2px solid #4CAF50; /* Green border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Spacing inside the border */
+    background-color: #f9f9f9; /* Light background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 15px; /* Space between questions */
+}
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+}
+#result-section {
+    display: none;
+}
+#submit-button {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text color */
+    border: none; /* Remove default border */
+    padding: 12px 20px; /* Vertical and horizontal padding */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Increase font size */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+}
+
+/* Add hover effect */
+#submit-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Add active effect */
+#submit-button:active {
+    transform: scale(0.95); /* Slightly shrink when clicked */
+}
+  
+ </style>
+  
+  </head>
+  
+<body>
+    <header>
+        <h1>შემაჯამებელი წერა #2</h1>
+    </header>
+    <main>
+        <form id="quizForm">
+            <!-- Questions will go here -->
+            <!-- Question 1 -->
+          <div class="question" id="question1"> <strong> (1) 1. </strong> <br> უდიდესი წილადი, რომლის მნიშვნელია \(20\) და რომელიც მოთავსებულია \(0,7\)-სა და \(0,9\)-ს შორის, არის
+    
+    <div>  </div>
+  <div>
+        <input type="radio" name="q1" value="a" id="q1a"><label for="q1a">\( \frac{15}{20} \)
+</label><br>
+        <input type="radio" name="q1" value="b" id="q1b"><label for="q1b">\( \frac{17}{20} \)
+</label><br>
+        <input type="radio" name="q1" value="c" id="q1c"><label for="q1c">\( \frac{18}{20} \)
+</label><br>
+        <input type="radio" name="q1" value="d" id="q1d"><label for="q1d">\( \frac{16}{20} \)
+</label>
+    </div>
+</div>
+
+<!-- Question 2 -->
+<div class="question" id="question2">
+  <strong> (1) 2. </strong> <br> 
+  თუ \(p\) და \(q\) მარტივი რიცხვებია, მაშინ \(p-q\) არ შეიძლება იყოს: 
+  <div>  </div>
+    <div>
+        <input type="radio" name="q2" value="a" id="q2a"><label for="q2a"> \(-4\) </label><br>
+        <input type="radio" name="q2" value="b" id="q2b"><label for="q2b"> \(0\) </label><br>
+        <input type="radio" name="q2" value="c" id="q2c"><label for="q2c"> \(2\) </label><br>
+        <input type="radio" name="q2" value="d" id="q2d"><label for="q2d"> \(7\) </label>
+    </div>
+</div>
+
+<!-- Question 3 -->
+<div class="question" id="question3">
+    <strong> (1) 3. </strong> <br>
+  იპოვეთ \( \frac{5x-y}{6x+4y} \) , თუ \( 2x=3y\)
+     <div>  </div>
+    <div>
+        <input type="radio" name="q3" value="a" id="q3a"><label for="q3a"> \(2\)</label><br>
+        <input type="radio" name="q3" value="b" id="q3b"><label for="q3b">\(0.5\)</label><br>
+        <input type="radio" name="q3" value="c" id="q3c"><label for="q3c">\(0.25\)</label><br>
+        <input type="radio" name="q3" value="d" id="q3d"><label for="q3d">\(3.25\)</label>
+    </div>
+</div>
+
+<!-- Question 4 -->
+<div class="question" id="question4">
+    <strong> (1) 4. </strong> <br>
+  ცნობილია, რომ \( 8a^{3} =5b^{2}\)  \( (a>0, b>0) \).  რამდენჯერ გაიზრდება \(a\)  თუ \(b\) -ს გავზრდით \( 2\sqrt{2} \)-ჯერ?
+  <div>  </div>
+    <div>
+        <input type="radio" name="q4" value="a" id="q4a"><label for="q4a">\( 8\)</label><br>
+        <input type="radio" name="q4" value="b" id="q4b"><label for="q4b">\( 2\)</label><br>
+        <input type="radio" name="q4" value="c" id="q4c"><label for="q4c">\( 40\)</label><br>
+        <input type="radio" name="q4" value="d" id="q4d"><label for="q4d">\( \sqrt{2} \)</label>
+    </div>
+</div>
+
+<!-- Question 5 -->
+<div class="question" id="question5">
+  <strong> (1) 5. </strong> <br>
+  როგორ შეიცვლება არითმეტიკული პროგრესიის მეათე წევრი, თუ ამ პროგრესიის პირველ წევრს დავტოვებთ 
+უცვლელად, ხოლო სხვაობას გავზრდით 2-ით? 
+  <div>  </div>
+    <div>
+        <input type="radio" name="q5" value="a" id="q5a"><label for="q5a">გაიზრდება 9-ით</label><br>
+        <input type="radio" name="q5" value="b" id="q5b"><label for="q5b">გაიზრდება 10-ით</label><br>
+        <input type="radio" name="q5" value="c" id="q5c"><label for="q5c">გაიზრდება 18-ით</label><br>
+        <input type="radio" name="q5" value="d" id="q5d"><label for="q5d">გაიზრდება 20-ით</label>
+    </div>
+</div>
+
+<!-- Question 6 -->
+<div class="question" id="question6">
+    <strong> (1) 6. </strong> <br>
+  რიცხვები  \( \log_{0.3}(0.5) \), \( 0 \), და \( \log_{0.3}(0.9) \)
+დაალაგეთ ზრდადობით
+  <div>  </div>
+    <div>
+        <input type="radio" name="q6" value="a" id="q6a"><label for="q6a">\( 0 \), \( \log_{0.3}(0.5) \), \( \log_{0.3}(0.9) \) </label><br>
+        <input type="radio" name="q6" value="b" id="q6b"><label for="q6b">\( 0 \), \( \log_{0.3}(0.9) \), \( \log_{0.3}(0.5) \)</label><br>
+        <input type="radio" name="q6" value="c" id="q6c"><label for="q6c">\( \log_{0.3}(0.9) \),\( 0 \), \( \log_{0.3}(0.5) \) </label><br>
+        <input type="radio" name="q6" value="d" id="q6d"><label for="q6d">\( \log_{0.3}(0.9) \),\( \log_{0.3}(0.5) \),\( 0 \) </label>
+    </div>
+</div>
+
+<!-- Question 7 -->
+<div class="question" id="question7">
+    <strong> (1) 7. </strong> <br>
+  იპოვეთ \( (x-4)\cdot\lg(x^{2}-8x+7)=0 \) განტოლების ამონახსნთა ნამრავლი.
+  <div>  </div>
+    <div>
+        <input type="radio" name="q7" value="a" id="q7a"><label for="q7a">28</label><br>
+        <input type="radio" name="q7" value="b" id="q7b"><label for="q7b">24</label><br>
+        <input type="radio" name="q7" value="c" id="q7c"><label for="q7c">6</label><br>
+        <input type="radio" name="q7" value="d" id="q7d"><label for="q7d">8</label>
+    </div>
+</div>
+
+<!-- Question 8 -->
+<div class="question" id="question8">
+    <strong> (1) 8. </strong> <br>
+  გეომეტრიული პროგრესიის მეხუთე წევრი 9-ჯერ მეტია მეოთხე წევრის კვადრატზე. იპოვეთ ამ პროგრესიის 
+მესამე წევრი.
+  <div>  </div>
+    <div>
+        <input type="radio" name="q8" value="a" id="q8a"><label for="q8a">\( \frac{1}{27} \)</label><br>
+        <input type="radio" name="q8" value="b" id="q8b"><label for="q8b">\( \frac{1}{9} \)</label><br>
+        <input type="radio" name="q8" value="c" id="q8c"><label for="q8c">9</label><br>
+        <input type="radio" name="q8" value="d" id="q8d"><label for="q8d">27</label>
+    </div>
+</div>
+
+<!-- Question 9 -->
+<div class="question" id="question9">
+    <strong> (1) 9. </strong> <br>
+  ტოლფერდა სამკუთხედის ერთ-ერთი კუთხის მოსაზღვრე კუთხის სიდიდე 25°-ის ტოლია. იპოვეთ ამ 
+სამკუთხედის ფუძესთან მდებარე კუთხის სიდიდე.
+  <div>  </div>
+    <div>
+        <input type="radio" name="q9" value="a" id="q9a"><label for="q9a"> 155°</label><br>
+        <input type="radio" name="q9" value="b" id="q9b"><label for="q9b"> 77,5° </label><br>
+        <input type="radio" name="q9" value="c" id="q9c"><label for="q9c">25°</label><br>
+        <input type="radio" name="q9" value="d" id="q9d"><label for="q9d">12,5° </label>
+    </div>
+</div>
+
+<!-- Question 10 -->
+<div class="question" id="question10">
+    <strong> (1) 10. </strong> <br>
+  AC წრფის პარალელური წრფე ABC სამკუთხედის AB და BC გვერდებს, შესაბამისად, D და E წერტილებში კვეთს: AB=18, AC=21, AD=3. იპოვეთ DE.  
+  <div>  </div>
+    <div>
+        <input type="radio" name="q10" value="a" id="q10a"><label for="q10a">17.5</label><br>
+        <input type="radio" name="q10" value="b" id="q10b"><label for="q10b">19</label><br>
+        <input type="radio" name="q10" value="c" id="q10c"><label for="q10c">15.5</label><br>
+        <input type="radio" name="q10" value="d" id="q10d"><label for="q10d">7</label>
+    </div>
+</div>
+
+
+</div>
+<button type="button" id="submit-button" onclick="submitQuiz()">Submit</button>
+        </form>
+        </form>
+<div id="result-section">
+
+
+<p id="result"></p>
+    </div>
+    </main>
+    <footer>
+        
+    </footer>
+     <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const correctAnswers = {
+                q1: "b",
+                q2: "a",
+                q3: "d",
+                q4: "b",
+                q5: "c",
+                q6: "b",
+                q7: "c",
+                q8: "b",
+                q9: "d",
+                q10: "a",
+                // Add all correct answers here for q1 to q20
+            };
+
+            function submitQuiz() {
+                let score = 0;
+                for (let i = 1; i <= 20; i++) {
+                    const question = document.querySelector(`input[name="q${i}"]:checked`);
+                    if (question && question.value === correctAnswers[`q${i}`]) {
+                        score++;
+                    }
+                }
+                document.getElementById('result').innerText = `შენ დააგროვე ${score} ქულა 10-დან.`;
+                document.getElementById('quizForm').style.display = 'none';
+                document.getElementById('result-section').style.display = 'block';  // Ensure the result section is displayed
+                document.getElementById('submit-button').disabled = true;
+            }
+
+            document.getElementById('submit-button').addEventListener('click', submitQuiz);
+        });
+  </script>
+  </body>
+</html>
