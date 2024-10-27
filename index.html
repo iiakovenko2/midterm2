@@ -218,7 +218,66 @@ footer {
         <input type="radio" name="q10" value="d" id="q10d"><label for="q10d">7</label>
     </div>
 </div>
+<!-- Question 11 -->
+<div class="question" id="question11">
+  <strong> (1) 11. </strong> <br>
+  ნამდვილ რიცხვთა \( a_n \) მიმდევრობა შეადგინეს შემდეგი წესით: პირველი წევრი \( a_1=30 \), ხოლო მიმდევრობის ყოველი შემდგომი წევრი წინა წევრის საშუალებით გამოითვლება ფორმულით \( a_{n+1}=\log_2(a_n) \).  წევრების რა უდიდესი რაოდენობა შეიძლება იყოს ამ მიმდევრობაში?
+    
+    <div>
+        <input type="radio" name="q11" value="a" id="q11a"><label for="q11a">\(5 \)</label><br>
+        <input type="radio" name="q11" value="b" id="q11b"><label for="q11b">\( 6\)</label><br>
+        <input type="radio" name="q11" value="c" id="q11c"><label for="q11c">\( 7\)</label><br>
+        <input type="radio" name="q11" value="d" id="q11d"><label for="q11d">\( 8\)</label>
+    </div>
+</div>
+ 
+          <!-- Question 12 -->
+<div class="question" id="question12">
+  <strong> (1) 12. </strong> <br>
+    ქვემოთ ჩამოთვლილი რიცხვებიდან რომლის ტოლი შეიძლება იყოს 1-ზე მეტი მთელი a რიცხვის 5-ზე 
+გაყოფისას მიღებული ნაშთი, თუ \( (a^{2}-4) \)-ის 5-ზე გაყოფისას მიიღება 2-ის ტოლი ნაშთი?
+    <div>
+        <input type="radio" name="q12" value="a" id="q12a"><label for="q12a">\( 0\)</label><br>
+        <input type="radio" name="q12" value="b" id="q12b"><label for="q12b">\( 2\)</label><br>
+        <input type="radio" name="q12" value="c" id="q12c"><label for="q12c">\( 3\)</label><br>
+        <input type="radio" name="q12" value="d" id="q12d"><label for="q12d">\( 4\)</label>
+    </div>
+</div>
+<!-- Question 13 -->
+<div class="question" id="question13">
+    <strong> (1) 13. </strong> <br>
+  თუ \(a<0\) და \(b>0\), მაშინ \(|a-b|\)=
+    <div>
+        <input type="radio" name="q13" value="a" id="q13a"><label for="q13a">\( a+b \)</label><br>
+        <input type="radio" name="q13" value="b" id="q13b"><label for="q13b">\( a-b \)</label><br>
+        <input type="radio" name="q13" value="c" id="q13c"><label for="q13c">\( b-a \)</label><br>
+        <input type="radio" name="q13" value="d" id="q13d"><label for="q13d">\( -a-b \)</label>
+    </div>
+</div>
+          <!-- Question 14 -->
+<div class="question" id="question14">
+    <strong> (1) 14. </strong> <br>
+  სამკუთხედის ორ წვეროსთან მდებარე გარე კუთხეები ტოლია \(120^{\circ}\) და \(135^{\circ}\)-ის. იპოვეთ ამ 
+სამკუთხედის მესამე წვეროსთან მდებარე შიდა კუთხის სიდიდე.
+    <div>
+        <input type="radio" name="q14" value="a" id="q14a"><label for="q14a">\(15^{\circ}\)</label><br>
+        <input type="radio" name="q14" value="b" id="q14b"><label for="q14b">\(45^{\circ}\)</label><br>
+        <input type="radio" name="q14" value="c" id="q14c"><label for="q14c">\(75^{\circ}\)</label><br>
+        <input type="radio" name="q14" value="d" id="q14d"><label for="q14d">\(105^{\circ}\)</label>
+    </div>
+</div>
 
+<!-- Question 15 -->
+<div class="question" id="question15">
+    <strong> (1) 15. </strong> <br>
+  რამდენი მთელი რიცხვი მდებარეობს \( (\sqrt[3]{121}; \log_2(2^{10}+4 ))\) ინტერვალში?
+    <div>
+        <input type="radio" name="q15" value="a" id="q15a"><label for="q15a">5</label><br>
+        <input type="radio" name="q15" value="b" id="q15b"><label for="q15b">6</label><br>
+        <input type="radio" name="q15" value="c" id="q15c"><label for="q15c">7</label><br>
+        <input type="radio" name="q15" value="d" id="q15d"><label for="q15d">15</label>
+    </div>
+</div>
 
 </div>
 <button type="button" id="submit-button">Submit</button>
@@ -246,18 +305,23 @@ footer {
                 q8: "b",
                 q9: "d",
                 q10: "a",
+                q11: "b",
+                q12: "d",
+                q13: "c",
+                q14: "c",
+                q15: "b",
                 // Add all correct answers here for q1 to q20
             };
 
         function submitQuiz() {
                 let score = 0;
-                for (let i = 1; i <= 10; i++) {
+                for (let i = 1; i <= 15; i++) {
                     const question = document.querySelector(`input[name="q${i}"]:checked`);
                     if (question && question.value === correctAnswers[`q${i}`]) {
                         score++;
                     }
                 }
-                document.getElementById('result').innerText = `შენ დააგროვე ${score} ქულა 10-დან.`;
+                document.getElementById('result').innerText = `შენ დააგროვე ${score} ქულა 15-დან.`;
                 document.getElementById('quizForm').style.display = 'none';
                 document.getElementById('result-section').style.display = 'block';  // Ensure the result section is displayed
                 document.getElementById('submit-button').disabled = true;
